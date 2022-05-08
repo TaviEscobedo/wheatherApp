@@ -27,7 +27,7 @@ const Home=()=>{
 
     
     useEffect(() => {  
-      getWeatherByLocation("paris")
+      getWeatherByLocation("Lima")
     }, [])
    
     return(

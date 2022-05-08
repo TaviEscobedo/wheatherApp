@@ -1,0 +1,219 @@
+
+:root{
+    --main-bg-color: rgb(246, 246, 246);
+}
+.contenedor{
+    /* max-width: 800px; */
+    width: 100%;
+    /* max-height: 85vh; */
+    /* width: 390px; */
+    /* border: 1px dashed salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    padding: 1em;
+}
+.frio{
+    background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    /* color: rgb(46, 206, 228); */
+}
+.calido{
+    background: linear-gradient(90deg, #f56e56 0%, #facf11 35%, #fbff00 100%);
+    /* color: rgb(255, 145, 2); */
+}
+.local{
+   color: gray;
+}
+.local>p:first-child{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.clima{
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-bottom: 1em;
+}
+.clima_temp{
+    /* width: 100%; */
+    width: 200px;
+    /* background: tomato; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clima_temp>img{
+    /* background: green; */
+    height: fit-content;
+    color: gray;
+}
+.clima_temp_c_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #3f3f3f;
+}
+.clima_temp_c_cont>p{
+    margin-top: 0;
+    font-size: 14px;
+}
+.clima_temp_c{
+    font-size:3.8em;
+    margin: 0;
+}
+.condiciones{
+    /* background: beige; */
+    background: var(--main-bg-color);
+    width: fit-content;
+    padding: 6px 10px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius:10px;
+}
+.condiciones>div{
+    display: flex;
+    align-items: center;
+    color:rgb(94, 94, 94);
+    width: 100%;
+      justify-content:space-between;  
+      /* background: tomato;
+      margin-bottom: -3px; */
+}
+.condiciones>div>div{
+    display:flex;
+    align-items: center;
+}
+.condiciones .condic_name{
+    font-size:14px;
+    
+}
+.condiciones .nros{
+    font-size: 14px;
+    font-weight: bold;
+}
+.condiciones>div>div>img{
+    /* width: 28px;  */
+    height: 26px;
+    margin-right: 0.2em;
+}
+/* .dias::-webkit-scrollbar {
+    display: none;
+} */
+
+.dias{
+    display: flex;
+    justify-content: center;
+    /* display: block; */
+    /* overflow-x: scroll; */
+    /* overflow-y:scroll; */
+    width: 100%;
+    /* scrollbar-width: none; */
+    /* -ms-overflow-style: none; */
+   /* min-height: 160px; */
+   padding: 0 10px;
+    height: 180px;
+    margin: 0 8px 0 8px;
+}
+
+/* .dias:hover{
+    cursor: grabbing;
+} */
+.dias:focus{
+    
+    border: none;
+    outline: none;
+}
+.dia{
+    min-width: 90px;
+    height: 120px;
+
+    background: var(--main-bg-color);
+    border:1px solid ghostwhite;
+    /* background: rgb(248, 248, 248); */
+    border-radius: 12px;
+    margin: 0 0.5em;
+   
+    padding: 1em;
+    /* border: 2px solid ghostwhite; */
+    /* color:rgb(182, 182, 182); */
+    color:rgb(94, 94, 94);
+    box-shadow: 0 3px 3px 1px grey;
+   
+}
+
+.dia>p{
+    font-weight:400;
+}
+
+/* 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(65, 168, 251);
+    border-radius: 20px;
+    
+    border: 1px solid #f1f2f3;
+}
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    height: 25px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar:horizontal {
+    height: 12px;
+  
+} */
+
+@media only screen and (max-width: 590px) {
+    .clima {
+      flex-direction:column;
+      align-items:center;
+      justify-content: center;
+    }
+    .clima_temp{
+        justify-content: center;
+    }
+    .local>p:first-child{
+        font-size: 28px;
+    }
+    .local>p:last-child{
+        font-size: 14px;
+    }
+    .condiciones>div{
+        /* background: tomato; */
+           margin-bottom: -8px;
+        }
+
+           .clima_temp_c{
+            font-size:2.8em;}
+    .dia{
+        padding:0;
+        font-size: 12px;
+        margin: 0 0.3em;
+        border: none;
+        min-width: 70px;
+        height: 100px;
+        /* box-shadow:none; */
+    }
+    .dia>img{
+        width: 35px;
+    }
+  }
+
+ 
+  /* @media only screen and (max-width: 768px) {
+  .dias{
+     
+  }
+} */

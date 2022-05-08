@@ -3,18 +3,17 @@ import Day from './Day';
 import styles from './Home.module.css'
 
 const Home=()=>{
-    const [queryCity,setQueryCity]=useState('london')
+    const [queryCity,setQueryCity]=useState('')
     const [clima1, setClima1] = useState({})
     // const [location,setLocation]=useState('')
     const handleSubmit=(e)=>{
         e.preventDefault();
-        getWeatherByLocation()
+        getWeatherByLocation(queryCity)
         
     }
-    const getWeatherByLocation=()=>{
-        
-    //  falso API en desuso => fetch("http://api.weatherstack.com/current?access_key=499de997fbfc55a8492dc683248989e8&query=London")
-    fetch(`https://weatherdbi.herokuapp.com/data/weather/${queryCity}`)
+    const getWeatherByLocation=(city)=>{
+        if(!city) return
+    fetch(`https://weatherdbi.herokuapp.com/data/weather/${city}`)
       .then(data=>data.json())
       .then(result=>setClima1(result))
       setQueryCity(" ")
@@ -22,7 +21,8 @@ const Home=()=>{
     //   setLoading(false)
     }
     useEffect(() => {
-        getWeatherByLocation()
+        
+        getWeatherByLocation("paris")
         
     }, [])
     return(
@@ -39,7 +39,7 @@ const Home=()=>{
                 
             </form>
         {
-            clima1.region?<Day clima={clima1}/>:<div>No se encontró ese lugar</div>
+            clima1?.region?<Day clima={clima1}/>:<div>No se encontró ese lugar</div>
         }
             
         

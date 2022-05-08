@@ -1,0 +1,21 @@
+/*spinner*/
+.spinner{
+    width: 60px;
+    height: 60px;
+    border:10px solid rgb(228, 228, 228);
+    border-radius: 50%;
+    border-left: 10px solid rgb(120, 7, 226);
+    box-sizing: border-box;
+    animation: spinn 1s linear infinite;
+     
+}
+
+@keyframes spinn{
+   from{
+       transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}

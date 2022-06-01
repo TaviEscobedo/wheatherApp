@@ -15,17 +15,16 @@ const Home=()=>{
     const handleSubmit=(e)=>{
         e.preventDefault();
         
-        if(queryCity===" "){
-            setError(true)
-            setTimeout(() => {
-               setError(false)
-            }, 2000); 
+        if(queryCity.trim().length > 0 ){
+            getWeatherByLocation(queryCity)
         }
-       
-       else{
-        getWeatherByLocation(queryCity)
-       }
-        
+        else
+        {
+            setError(true)
+                setTimeout(() => {
+                setError(false)
+                }, 1800); 
+        }
     }
     const getWeatherByLocation=async(city)=>{
 

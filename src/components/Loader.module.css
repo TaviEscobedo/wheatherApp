@@ -2,11 +2,12 @@
 .spinner{
     width: 60px;
     height: 60px;
-    border:10px solid rgb(228, 228, 228);
+    border:10px solid rgb(64, 207, 255);
     border-radius: 50%;
-    border-left: 10px solid rgb(120, 7, 226);
+    border-left: 10px solid rgb(228, 228, 228);
     box-sizing: border-box;
     animation: spinn 1s linear infinite;
+    margin-top:36px;
      
 }
 
